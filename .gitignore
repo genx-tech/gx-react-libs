@@ -11,6 +11,7 @@ workspace/*/coverage
 
 # production
 /build
+workspace/*/lib
 
 # misc
 .DS_Store

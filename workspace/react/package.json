@@ -2,10 +2,10 @@
     "name": "@genx/react",
     "version": "0.1.0",
     "description": "Gen-X React Library",
-    "main": "src/index.js",
+    "main": "lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "echo \"Skipped, nothing to build.\"",
+        "build": "swc src --env-name='production' -d lib --source-maps --copy-files",
         "lint": "eslint \"**/*.js\"",
         "lint:fix": "eslint --fix \"src/**/*.js\"",
         "prettier": "prettier --write --ignore-unknown ."
