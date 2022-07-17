@@ -14,6 +14,7 @@ function Icon({ _registry, type, name, ...props }) {
     }
 
     if (type === 'x-image') {
+        // eslint-disable-next-line jsx-a11y/alt-text
         return <img src={name} {...props} />;
     }
 

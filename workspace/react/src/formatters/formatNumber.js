@@ -22,20 +22,3 @@ export function fShortenNumber(number) {
 export function fData(number) {
     return numeral(number).format('0.0 b');
 }
-
-const localeMapping = {
-    'zh-cn': 'chs'
-};
-
-export function setLocale(locale) {
-    const toLowerCase = locale.toLowerCase();
-
-    let numeralLocale = localeMapping[toLowerCase];
-    if (!numeralLocale) {
-        switch (toLowerCase) {
-            case 'zh-tw':
-
-                break;
-        }
-    }
-}

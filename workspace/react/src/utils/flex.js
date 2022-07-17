@@ -107,9 +107,11 @@ export const hAlignInVBox = (hAlign) => {
     return { alignSelf: hAlign };
 };
 
-export default {
+const flexUtil = {
     hBox,
     vBox,
     vAlignInHBox,
     hAlignInVBox,
 };
+
+export default flexUtil;

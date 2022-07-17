@@ -27,12 +27,14 @@ const useDepsChangeTracking = (dependencies, dependencyNames = []) => {
 export const useMemoDebugger = (hookBody, dependencies, dependencyNames) => {
     useDepsChangeTracking(dependencies, dependencyNames);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     return useMemo(hookBody, dependencies);
 };
 
 export const useEffectDebugger = (hookBody, dependencies, dependencyNames) => {
     useDepsChangeTracking(dependencies, dependencyNames);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(hookBody, dependencies);
 };
 

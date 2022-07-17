@@ -1,4 +1,4 @@
-# Gen-X React 
+# Gen-X React
 
 package: @genx/react
 
@@ -8,7 +8,7 @@ Gen-X React Basic Library
 
 ### Core
 
-* `Runtime` singleton
+-   `Runtime` singleton
 
 ### Components
 
@@ -25,7 +25,6 @@ Gen-X React Basic Library
 ### Native-specific
 
 ### Web-specific
-
 
 ## License
 

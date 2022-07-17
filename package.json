@@ -5,12 +5,22 @@
     "main": "index.js",
     "private": true,
     "scripts": {
-        "prettier": "prettier --write --ignore-unknown ."
+        "prettier": "prettier --write --ignore-unknown . && pnpm run -r prettier",
+        "lint": "pnpm run -r lint",
+        "lint:fix": "pnpm run -r lint:fix"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "prettier": "^2.7.1"
+        "@changesets/cli": "^2.23.2",
+        "@react-native-community/eslint-config": "^3.0.3",
+        "eslint": "^8.20.0",
+        "eslint-config-react-app": "^7.0.1",
+        "prettier": "^2.7.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-native": "^0.69.1",
+        "react-native-web": "^0.18.6"
     }
 }

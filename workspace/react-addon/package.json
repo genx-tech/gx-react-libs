@@ -1,18 +1,22 @@
 {
     "name": "@genx/react-addon",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Gen-X React Addons",
     "main": "src/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "lint": "eslint \"**/*.js\"",
+        "lint:fix": "eslint --fix \"src/**/*.js\"",
+        "prettier": "prettier --write --ignore-unknown ."
     },
     "keywords": [],
     "author": "Gen-X Tech <rockie@gen-x.tech> (https://github.com/genx-tech)",
     "license": "MIT",
     "peerDependencies": {
-        "react": "*",
-        "react-dom": "*",
-        "react-native-web": "*"
+        "react": ">= 17",
+        "react-dom": ">= 17",
+        "react-native": ">= 0.68",
+        "react-native-web": ">= 0.18"
     },
     "dependencies": {
         "@mui/material": "^5.8.4",
