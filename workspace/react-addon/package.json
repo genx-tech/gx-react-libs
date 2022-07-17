@@ -1,0 +1,22 @@
+{
+    "name": "@genx/react-addon",
+    "version": "0.0.1",
+    "description": "Gen-X React Addons",
+    "main": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Gen-X Tech <rockie@gen-x.tech> (https://github.com/genx-tech)",
+    "license": "MIT",
+    "peerDependencies": {
+        "react": "*",
+        "react-dom": "*",
+        "react-native-web": "*"
+    },
+    "dependencies": {
+        "@mui/material": "^5.8.4",
+        "detect-browser-language": "^0.0.2",
+        "superagent": "^7.1.6"
+    }
+}

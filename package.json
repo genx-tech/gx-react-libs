@@ -1,0 +1,16 @@
+{
+    "name": "gx-react-libs",
+    "version": "0.0.1",
+    "description": "Gen-X React Libraries Workspace",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "prettier": "prettier --write --ignore-unknown ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "prettier": "^2.7.1"
+    }
+}
