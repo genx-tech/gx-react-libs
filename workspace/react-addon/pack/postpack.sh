@@ -1,2 +1,2 @@
 #!/bin/sh
-git clean -fd
+git clean -fd .
