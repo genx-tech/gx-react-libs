@@ -1,4 +1,4 @@
-import Runtime from '../Runtime';
+// todo: implementation
 
 class LocalStorage {
     static async getObject_(key) {}

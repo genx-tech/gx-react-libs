@@ -1,5 +1,12 @@
 # @genx/react-addon
 
+## 0.3.0
+
+### Minor Changes
+
+-   f012072: Add build process
+-   7750f52: Patch build system
+
 ## 0.1.1
 
 ### Patch Changes

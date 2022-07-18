@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import ExecutionEnvironment from './utils';
 
 const _DEFAULT_THEME_CLASS_NAME = '__base';
@@ -52,10 +53,8 @@ class StyleXSheet {
         this.isSlow =
             (_isSlow = props.isSlow) != null
                 ? _isSlow
-                : // eslint-disable-next-line no-undef
-                typeof location === 'object' && typeof location.search === 'string'
-                ? // eslint-disable-next-line no-undef
-                  location.search.includes('stylex-slow')
+                : typeof location === 'object' && typeof location.search === 'string'
+                ? location.search.includes('stylex-slow')
                 : false;
         this.supportsVariables =
             (_supportVariables = props.supportsVariables) != null ? _supportVariables : isSupportCSS();

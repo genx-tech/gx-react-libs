@@ -1,5 +1,17 @@
 # @genx/react
 
+## 0.3.0
+
+### Minor Changes
+
+-   f012072: Add build process
+-   7750f52: Patch build system
+
+### Patch Changes
+
+-   Updated dependencies [7750f52]
+    -   @genx/stylex@0.3.0
+
 ## 0.1.1
 
 ### Patch Changes

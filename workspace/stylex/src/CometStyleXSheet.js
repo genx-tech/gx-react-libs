@@ -19,7 +19,9 @@ class _CometStyleXSheet extends StylexSheet {
 
 const _rootStyleSheet = new _CometStyleXSheet();
 
-export default {
+const CometStyleXSheet = {
     CometStyleXSheet: _CometStyleXSheet,
     rootStyleSheet: _rootStyleSheet,
 };
+
+export default CometStyleXSheet;
