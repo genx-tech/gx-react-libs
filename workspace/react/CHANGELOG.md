@@ -1,5 +1,11 @@
 # @genx/react
 
+## 0.4.0
+
+### Minor Changes
+
+-   Export formatters
+
 ## 0.3.0
 
 ### Minor Changes
