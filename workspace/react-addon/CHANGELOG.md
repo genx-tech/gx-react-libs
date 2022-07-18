@@ -1,5 +1,11 @@
 # @genx/react-addon
 
+## 0.4.0
+
+### Minor Changes
+
+-   Fix packing structure
+
 ## 0.3.0
 
 ### Minor Changes
