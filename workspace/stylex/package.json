@@ -1,7 +1,7 @@
 {
-    "name": "@genx/react-addon",
-    "version": "0.1.1",
-    "description": "Gen-X React Addons",
+    "name": "@genx/stylex",
+    "version": "0.1.0",
+    "description": "Gen-X React Styling Library",
     "main": "lib/index.js",
     "module": "lib/index.js",
     "react-native": "lib/index.js",
@@ -23,8 +23,5 @@
         "react-native-web": ">= 0.18"
     },
     "dependencies": {
-        "@mui/material": "^5.8.4",
-        "detect-browser-language": "^0.0.2",
-        "superagent": "^7.1.6"
     }
 }

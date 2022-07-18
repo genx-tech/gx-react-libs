@@ -3,9 +3,11 @@
     "version": "0.1.1",
     "description": "Gen-X React Library",
     "main": "lib/index.js",
+    "module": "lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "swc src --env-name='production' -d lib --source-maps --copy-files",
+        "clean": "shx rm -rf ./lib",
+        "build": "pnpm clean && NODE_ENV=production babel src -d lib --source-maps --copy-files",
         "lint": "eslint \"**/*.js\"",
         "lint:fix": "eslint --fix \"src/**/*.js\"",
         "prettier": "prettier --write --ignore-unknown ."
@@ -21,11 +23,16 @@
     },
     "dependencies": {
         "@genx/july": "^1.0.5",
+        "@genx/stylex": "workspace:*",
+        "fast-deep-equal": "^3.1.3",
         "lodash": "^4.17.21",
         "mobx": "^6.6.0",
         "mobx-react-lite": "^3.4.0",
         "react-intl": "^6.0.4",
         "react-router-dom": "^6.3.0",
         "swr": "^1.3.0"
+    },
+    "devDependencies": {
+        "@genx/babel-plugin-transform-stylex": "^0.1.1"
     }
 }

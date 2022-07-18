@@ -9,6 +9,9 @@ workspace/*/coverage
 /.next/
 /out/
 
+# parcel
+.parcel-cache
+
 # production
 /build
 workspace/*/lib

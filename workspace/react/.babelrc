@@ -1,0 +1,13 @@
+{
+    "presets": ["@babel/react", "@babel/preset-env"],
+    "plugins": [
+        [
+            "@genx/babel-plugin-transform-stylex",
+            {
+                "inject": true,
+                "enableLogging": false,
+                "useAll": true
+            }
+        ]
+    ]
+}

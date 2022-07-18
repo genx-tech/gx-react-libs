@@ -1,0 +1,127 @@
+
+/**
+ * For quick uses.
+ * */
+stylex.absoluteFill = {
+    bottom: 0,
+    boxSizing: 'border-box',
+    right: 0,
+    position: 'absolute',
+    left: 0,
+    top: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.absoluteCenter = {
+    boxSizing: 'border-box',
+    left: '50%',
+    position: 'absolute',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.blockBase = {
+    borderStyle: 'solid',
+    borderWidth: 0,
+    boxSizing: 'border-box',
+    display: 'block',
+    flexGrow: 1,
+    flexShrink: 1,
+    margin: 0,
+    padding: 0,
+    position: 'relative',
+    zIndex: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.inlineBase = Object.assign({}, stylex.blockBase, {
+    display: 'inline',
+});
+
+/**
+ * For quick uses.
+ * */
+stylex.buttonBase = {
+    appearance: 'none',
+    backgroundColor: 'transparent',
+    borderStyle: 'solid',
+    borderWidth: 0,
+    boxSizing: 'border-box',
+    margin: 0,
+    padding: 0,
+    position: 'relative',
+    textAlign: 'inherit',
+    zIndex: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.flexBase = {
+    alignItems: 'stretch',
+    borderStyle: 'solid',
+    borderWidth: 0,
+    boxSizing: 'border-box',
+    display: 'flex',
+    flexDirection: 'column',
+    flexGrow: 1,
+    flexShrink: 1,
+    justifyContent: 'space-between',
+    margin: 0,
+    minHeight: 0,
+    minWidth: 0,
+    padding: 0,
+    position: 'relative',
+    zIndex: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.flexInlineBase = Object.assign({}, stylex.flexBase, {
+    display: 'inline-flex',
+});
+
+/**
+ * For quick uses.
+ * */
+stylex.linkBase = {
+    backgroundColor: 'transparent',
+    backgroundImage: 'none',
+    boxSizing: 'border-box',
+    color: 'inherit',
+    cursor: 'pointer',
+    position: 'relative',
+    textDecoration: 'none',
+    zIndex: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.listBase = {
+    boxSizing: 'border-box',
+    listStyle: 'none',
+    marginBottom: 0,
+    marginTop: 0,
+    paddingLeft: 0,
+};
+
+/**
+ * For quick uses.
+ * */
+stylex.visuallyHidden = {
+    clip: 'rect(0, 0, 0, 0)',
+    clipPath: 'inset(50%)',
+    height: 1,
+    overflow: 'hidden',
+    position: 'absolute',
+    width: 1,
+};
