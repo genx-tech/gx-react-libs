@@ -1,17 +1,20 @@
 {
     "name": "@genx/react-addon",
-    "version": "0.3.0",
+    "version": "0.3.2",
     "description": "Gen-X React Addons",
-    "main": "lib/index.js",
-    "module": "lib/index.js",
-    "react-native": "lib/index.js",
+    "main": "index.js",
+    "module": "index.js",
+    "react-native": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "clean": "shx rm -rf ./lib",
         "build": "pnpm clean && swc src --env-name='production' -d lib --source-maps --copy-files",
         "lint": "eslint \"**/*.js\"",
         "lint:fix": "eslint --fix \"src/**/*.js\"",
-        "prettier": "prettier --write --ignore-unknown ."
+        "prettier": "prettier --write --ignore-unknown .",
+        "prepare": "pnpm build",
+        "prepack": "sh ./pack/prepack.sh",
+        "postpack": "sh ./pack/postpack.sh"
     },
     "keywords": [],
     "author": "Gen-X Tech <rockie@gen-x.tech> (https://github.com/genx-tech)",
