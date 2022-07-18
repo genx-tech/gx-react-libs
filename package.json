@@ -11,7 +11,7 @@
         "build": "pnpm run -r build"
     },
     "keywords": [],
-    "author": "",
+    "author": "Gen-X Tech <rockie@gen-x.tech> (https://github.com/genx-tech)",
     "license": "ISC",
     "devDependencies": {
         "@babel/cli": "^7.18.6",
