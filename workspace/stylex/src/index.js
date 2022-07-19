@@ -1,6 +1,8 @@
-import CometStyleXSheet from './CometStyleXSheet';
+import { rootStyleSheet as _rootStyleSheet } from './CometStyleXSheet';
 
-CometStyleXSheet.rootStyleSheet.injectTheme();
+export const rootStyleSheet = _rootStyleSheet;
+
+_rootStyleSheet.injectTheme();
 
 function mc(array) {
     let mixed = {};
@@ -56,7 +58,7 @@ stylex.inline = function (...args) {
  * Inject compiled styles to css stylesheet if need (if it's never injected before).
  * */
 stylex.inject = function (a) {
-    CometStyleXSheet.rootStyleSheet.insert(a);
+    _rootStyleSheet.insert(a);
 };
 
 /** ...................

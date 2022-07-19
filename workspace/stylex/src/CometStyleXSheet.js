@@ -1,6 +1,6 @@
 import StylexSheet from './StyleXSheet';
 
-class _CometStyleXSheet extends StylexSheet {
+class CometStyleXSheet extends StylexSheet {
     constructor(props = {}) {
         super(props);
 
@@ -17,11 +17,6 @@ class _CometStyleXSheet extends StylexSheet {
     }
 }
 
-const _rootStyleSheet = new _CometStyleXSheet();
-
-const CometStyleXSheet = {
-    CometStyleXSheet: _CometStyleXSheet,
-    rootStyleSheet: _rootStyleSheet,
-};
+export const rootStyleSheet = new CometStyleXSheet();
 
 export default CometStyleXSheet;

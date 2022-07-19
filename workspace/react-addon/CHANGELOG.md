@@ -1,5 +1,14 @@
 # @genx/react-addon
 
+## 0.4.2
+
+### Patch Changes
+
+-   Refactor runtime registry naming.
+-   Updated dependencies
+    -   @genx/react@0.4.4
+    -   @genx/stylex@0.3.1
+
 ## 0.4.0
 
 ### Minor Changes

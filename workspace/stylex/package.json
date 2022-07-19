@@ -1,6 +1,6 @@
 {
     "name": "@genx/stylex",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Gen-X React Styling Library",
     "main": "lib/index.js",
     "module": "lib/index.js",

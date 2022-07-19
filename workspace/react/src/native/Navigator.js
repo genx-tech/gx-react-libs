@@ -70,7 +70,7 @@ const buildOptions = (registry, props) => {
 };
 
 const Navigator = ({ type = 'stack', registry, routes, screenOptions, ...props }) => {
-    const Navigation = Runtime.require(`navigation:${type}`)();
+    const Navigation = Runtime.require(`nav:${type}`)();
     const Screen = Navigation.Screen;
     const elScreens = renderScreens(Screen, registry, routes);
     screenOptions && (screenOptions = buildOptions(registry, screenOptions));

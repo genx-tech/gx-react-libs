@@ -1,12 +1,18 @@
-import CometStyleXSheet from '@genx/stylex-theme';
+import { rootStyleSheet } from '@genx/stylex';
 
+/**
+ * Pass in primary theme and secondary theme and returns the theme changer trigger function
+ * @param {*} primary
+ * @param {*} secondary
+ * @returns {Function}
+ */
 const makeStylexTheme = (primary, secondary) => {
-    CometStyleXSheet.rootStyleSheet.setRootTheme(primary);
+    rootStyleSheet.setRootTheme(primary);
     if (secondary) {
-        CometStyleXSheet.rootStyleSheet.setCustomTheme(secondary);
+        rootStyleSheet.setCustomTheme(secondary);
     }
 
-    return (seconaryOn) => CometStyleXSheet.rootStyleSheet.toggleCustomTheme(seconaryOn);
+    return (seconaryOn) => rootStyleSheet.toggleCustomTheme(seconaryOn);
 };
 
 export default makeStylexTheme;

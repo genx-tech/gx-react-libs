@@ -3,4 +3,4 @@ import detectBrowserLanguage from 'detect-browser-language';
 
 // ----------------------------------------------------------------------
 
-Runtime.register('language-detector', { detect: detectBrowserLanguage });
+Runtime.registerObject('languageDetector', { detect: detectBrowserLanguage });

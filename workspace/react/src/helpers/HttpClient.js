@@ -44,7 +44,7 @@ class HttpClient {
     constructor(endpoint, config) {
         endpoint != null || (endpoint = '');
         this.endpoint = endpoint;
-        this.agent = Runtime.require('httpAgentCreator')(config);
+        this.agent = Runtime.getCreator('httpAgent')(config);
     }
 
     /**

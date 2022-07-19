@@ -1,5 +1,11 @@
 # @genx/stylex
 
+## 0.3.1
+
+### Patch Changes
+
+-   Refactor runtime registry naming.
+
 ## 0.3.0
 
 ### Minor Changes

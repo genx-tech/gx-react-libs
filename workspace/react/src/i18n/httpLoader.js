@@ -1,7 +1,7 @@
 import Runtime from '../Runtime';
 
 const httpLoaderFn = (urlBuilder) => {
-    const request = Runtime.require('httpAgentCreator')();
+    const request = Runtime.getCreator('httpAgent')();
 
     return async (locale, moduleName) => {
         const url = urlBuilder(locale, moduleName);

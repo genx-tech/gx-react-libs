@@ -1,5 +1,25 @@
 # @genx/react
 
+## 0.4.4
+
+### Patch Changes
+
+-   Refactor runtime registry naming.
+-   Updated dependencies
+    -   @genx/stylex@0.3.1
+
+## 0.4.3
+
+### Patch Changes
+
+-   Fix exports of initFormatIntl
+
+## 0.4.2
+
+### Patch Changes
+
+-   Minor fix
+
 ## 0.4.0
 
 ### Minor Changes

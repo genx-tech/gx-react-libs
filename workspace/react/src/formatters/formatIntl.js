@@ -1,5 +1,4 @@
 let currentLocale;
-
 let fCurrencyShortFormatter;
 
 export function fCurrencyShort(number, currency) {
@@ -13,11 +12,9 @@ export function fCurrencyShort(number, currency) {
     return fCurrencyShortFormatter.format(number);
 }
 
-const formatNumberIntl = (locale) => {
+export const initFormatIntl = (locale) => {
     if (locale !== currentLocale) {
         currentLocale = locale;
         fCurrencyShortFormatter = null;
     }
 };
-
-export default formatNumberIntl;

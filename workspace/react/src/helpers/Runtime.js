@@ -11,27 +11,57 @@ if (isDevMode) {
     setLogLevel('verbose');
 }
 
+/**
+ * @class
+ */
 class Runtime {
     isDevMode = isDevMode;
-    //warnMissingTranslation = false;
+    warnMissingTranslation = false;
     config = {};
     modulesRegistry = {};
     swrConfig = swrConfig;
 
-    //dynamic loading
-    require = (moduleName) => this.modulesRegistry[moduleName];
-    register = (moduleName, loadedModule, asDefaultOnly) => {
+    // getter/setter of dynamic objects
+    require(moduleName) {
+        return this.modulesRegistry[moduleName];
+    }
+
+    register(moduleName, loadedModule, asDefaultOnly) {
         if (!asDefaultOnly || !(moduleName in this.modulesRegistry)) {
             this.modulesRegistry[moduleName] = loadedModule;
         }
-    };
+    }
 
-    //logger related
+    getObject(objectName) {
+        return this.require(`obj:${objectName}`);
+    }
+
+    registerObject(objectName, objectInstance) {
+        this.register(`obj:${objectName}`, objectInstance);
+    }
+
+    getComponent(componentName) {
+        return this.require(`rc:${componentName}`);
+    }
+
+    registerComponent(componentName, component) {
+        this.register(`rc:${componentName}`, component);
+    }
+
+    getCreator(objectName) {
+        return this.require(`create:${objectName}`);
+    }
+
+    registerCreator(objectName, creatorFunction) {
+        this.register(`create:${objectName}`, creatorFunction);
+    }
+
+    // logger related
     log = makeLogger(consoleLogger);
     getLogLevel = getLogLevel;
     setLogLevel = setLogLevel;
 
-    //updater
+    // updater
     update(key, value) {
         if (typeof value === 'undefined' && typeof key === 'object') {
             Object.assign(this.config, key);
@@ -47,7 +77,7 @@ class Runtime {
     }
 
     finalize() {
-        //todo: some finilization work to get the runtime ready
+        // some finilization work to get the runtime ready, if any in the future
 
         if (isDevMode) {
             this.log('debug', () => {
