@@ -19,7 +19,7 @@
                 "runtime": "automatic"
             }
         },
-        "target": "es2022",
+        "target": "es2019",
         "loose": false,
         "externalHelpers": false,
         "keepClassNames": true

@@ -1,5 +1,14 @@
 # @genx/react-addon
 
+## 0.4.4
+
+### Patch Changes
+
+-   Change build target to es2019
+-   Updated dependencies
+    -   @genx/stylex@0.3.2
+    -   @genx/react@0.4.6
+
 ## 0.4.3
 
 ### Patch Changes
