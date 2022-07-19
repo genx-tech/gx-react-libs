@@ -1,8 +1,8 @@
 # [Gen-X Stylex](#genx-stylex)
 
-* package: @genx/stylex
-* latest version: v0.1.0
-* forked from: https://github.com/ladifire-opensource/stylex
+-   package: @genx/stylex
+-   latest version: v0.1.0
+-   forked from: https://github.com/ladifire-opensource/stylex
 
 <h1 align="center">
   <img src="https://stylex.vercel.app/logo-black.png" height="96" />
@@ -49,17 +49,17 @@ This is example of Babel config with stylex:
 ```js
 /*eslint-env node*/
 module.exports = {
-  presets: ["@babel/react", "@babel/env"],
-  plugins: [
-    //...
-    [
-      "@genx/babel-plugin-transform-stylex",
-      {
-        inject: true, // will inject compiled css to stylesheet in head
-        useAll: true, // recommend to turn on
-      },
+    presets: ['@babel/react', '@babel/env'],
+    plugins: [
+        //...
+        [
+            '@genx/babel-plugin-transform-stylex',
+            {
+                inject: true, // will inject compiled css to stylesheet in head
+                useAll: true, // recommend to turn on
+            },
+        ],
     ],
-  ],
 };
 ```
 
@@ -71,19 +71,19 @@ Finally in `craco.config.js` add:
 
 ```js
 module.exports = {
-  // ...
-  babel: {
-    /// ...
-    plugins: [
-      /// ...
-      [
-        "@genx/babel-plugin-transform-stylex",
-        {
-          inject: true,
-        },
-      ],
-    ],
-  },
+    // ...
+    babel: {
+        /// ...
+        plugins: [
+            /// ...
+            [
+                '@genx/babel-plugin-transform-stylex',
+                {
+                    inject: true,
+                },
+            ],
+        ],
+    },
 };
 ```
 
@@ -96,16 +96,16 @@ There're some methods you can you with stylex:
 This method will create a new stylex object:
 
 ```js
-import stylex from "@genx/stylex";
+import stylex from '@genx/stylex';
 
 const styles = stylex.create({
-  root: {
-    fontWeight: 700,
-    color: "blue",
-  },
-  button: {
-    borderRadius: 8,
-  },
+    root: {
+        fontWeight: 700,
+        color: 'blue',
+    },
+    button: {
+        borderRadius: 8,
+    },
 });
 ```
 
@@ -133,18 +133,18 @@ This method will dedupe (override) duplicate style properties:
 
 ```js
 <div
-  className={stylex.dedupe(
-    {
-      color: "var(--primary-text)",
-    },
-    isError
-      ? {
-          color: "var(--negative)",
-        }
-      : null
-  )}
+    className={stylex.dedupe(
+        {
+            color: 'var(--primary-text)',
+        },
+        isError
+            ? {
+                  color: 'var(--negative)',
+              }
+            : null
+    )}
 >
-  Dedupe
+    Dedupe
 </div>
 ```
 
@@ -152,28 +152,28 @@ This method will dedupe (override) duplicate style properties:
 
 ```js
 let j = stylex.create({
-  dark: {
-    backgroundColor: "var(--placeholder-icon)",
-  },
-  paused: {
-    animationPlayState: "paused",
-  },
-  root: {
-    animationDirection: "alternate",
-    animationDuration: "1s",
-    animationIterationCount: "infinite",
-    animationName: stylex.keyframes({
-      "0%": {
+    dark: {
+        backgroundColor: 'var(--placeholder-icon)',
+    },
+    paused: {
+        animationPlayState: 'paused',
+    },
+    root: {
+        animationDirection: 'alternate',
+        animationDuration: '1s',
+        animationIterationCount: 'infinite',
+        animationName: stylex.keyframes({
+            '0%': {
+                opacity: 0.25,
+            },
+            '100%': {
+                opacity: 1,
+            },
+        }),
+        animationTimingFunction: 'steps(10,end)',
+        backgroundColor: 'var(--wash)',
         opacity: 0.25,
-      },
-      "100%": {
-        opacity: 1,
-      },
-    }),
-    animationTimingFunction: "steps(10,end)",
-    backgroundColor: "var(--wash)",
-    opacity: 0.25,
-  },
+    },
 });
 ```
 
@@ -181,13 +181,13 @@ let j = stylex.create({
 
 ```js
 const s = stylex.compose(
-  {
-    color: "red",
-    backgroundColor: "blue",
-  },
-  {
-    backgroundColor: "white",
-  }
+    {
+        color: 'red',
+        backgroundColor: 'blue',
+    },
+    {
+        backgroundColor: 'white',
+    }
 );
 ```
 
@@ -195,8 +195,8 @@ The above code will transformed to:
 
 ```js
 const s = {
-  color: "a512sdfe5", // red
-  backgroundColor: "wer115asse", // white
+    color: 'a512sdfe5', // red
+    backgroundColor: 'wer115asse', // white
 };
 ```
 
@@ -287,27 +287,27 @@ This is example of stylex's babel config:
 
 ```js
 module.exports = {
-  presets: ["@babel/react", "@babel/env", "@babel/preset-typescript"],
-  plugins: [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-proposal-object-rest-spread",
-    "@babel/plugin-transform-runtime",
-    ["@babel/plugin-transform-modules-commonjs"],
-    [
-      "@babel/plugin-transform-spread",
-      {
-        loose: true,
-      },
+    presets: ['@babel/react', '@babel/env', '@babel/preset-typescript'],
+    plugins: [
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-proposal-object-rest-spread',
+        '@babel/plugin-transform-runtime',
+        ['@babel/plugin-transform-modules-commonjs'],
+        [
+            '@babel/plugin-transform-spread',
+            {
+                loose: true,
+            },
+        ],
+        ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ['@babel/plugin-proposal-class-properties', { loose: true }],
+        [
+            '@ladifire-opensource/babel-plugin-transform-stylex',
+            {
+                inject: true, // will inject compiled css to stylesheet in head
+            },
+        ],
     ],
-    ["@babel/plugin-proposal-decorators", { legacy: true }],
-    ["@babel/plugin-proposal-class-properties", { loose: true }],
-    [
-      "@ladifire-opensource/babel-plugin-transform-stylex",
-      {
-        inject: true, // will inject compiled css to stylesheet in head
-      },
-    ],
-  ],
 };
 ```
 
@@ -323,25 +323,25 @@ If you using Reactjs, consider to use **xstyle** props to pass some stylex class
 parent to child. Let's see bellow example:
 
 ```js
-import * as React from "react";
-import stylex from "@ladifire-opensource/stylex";
-import ChildComponent from "./path/to/child";
+import * as React from 'react';
+import stylex from '@ladifire-opensource/stylex';
+import ChildComponent from './path/to/child';
 
-type Style = "root";
+type Style = 'root';
 
 const styles = stylex.create({
-  root: {
-    color: "red",
-  },
+    root: {
+        color: 'red',
+    },
 });
 
 const Parent = () => {
-  return (
-    <ChildComponent
-      xstyle={styles.root}
-      //...otherProps
-    />
-  );
+    return (
+        <ChildComponent
+            xstyle={styles.root}
+            //...otherProps
+        />
+    );
 };
 ```
 
@@ -352,20 +352,20 @@ sx prop.
 Then in your child component you can use `xstyle` props as:
 
 ```js
-import * as React from "react";
+import * as React from 'react';
 
-import stylex from "@ladifire-opensource/stylex";
+import stylex from '@ladifire-opensource/stylex';
 
 const styles = stylex.create({
-  root: {
-    backgroundColor: "red",
-  },
+    root: {
+        backgroundColor: 'red',
+    },
 });
 
 const ChildComponent = (props) => {
-  const { xstyle } = props;
+    const { xstyle } = props;
 
-  return <div className={stylex(styles.root, xstyle)}>Child</div>;
+    return <div className={stylex(styles.root, xstyle)}>Child</div>;
 };
 ```
 
@@ -376,9 +376,9 @@ variables, like this:
 
 ```js
 const defaultThemeVariables = {
-  "primary-icon": "rgb(15, 20, 25)",
-  "primary-text": "rgb(15, 20, 25)",
-  "primary-text-on-media": "#FFFFFF",
+    'primary-icon': 'rgb(15, 20, 25)',
+    'primary-text': 'rgb(15, 20, 25)',
+    'primary-text-on-media': '#FFFFFF',
 };
 ```
 
@@ -408,35 +408,35 @@ CometStyleXSheet.rootStyleSheet.toggleCustomTheme(!isCustomThemeActive);
 This is example for React users:
 
 ```js
-import CometStyleXSheet from "@ladifire-opensource/stylex-theme";
+import CometStyleXSheet from '@ladifire-opensource/stylex-theme';
 
-import { themeDataBase } from "./themeDataBase";
-import { themeDataCustom } from "./themeDataCustom";
+import { themeDataBase } from './themeDataBase';
+import { themeDataCustom } from './themeDataCustom';
 
 export const ThemingExamples = () => {
-  React.useEffect(() => {
-    CometStyleXSheet.rootStyleSheet.setRootTheme(themeDataBase);
-    CometStyleXSheet.rootStyleSheet.setCustomTheme(themeDataCustom);
-  }, []);
+    React.useEffect(() => {
+        CometStyleXSheet.rootStyleSheet.setRootTheme(themeDataBase);
+        CometStyleXSheet.rootStyleSheet.setCustomTheme(themeDataCustom);
+    }, []);
 
-  const [isDark, setIsDark] = React.useState < boolean > (() => false);
-  const toggleIsDark = React.useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      const target = event.target;
-      setIsDark(target.checked);
-      CometStyleXSheet.rootStyleSheet.toggleCustomTheme(!isDark);
-    },
-    [isDark, setIsDark]
-  );
+    const [isDark, setIsDark] = React.useState < boolean > (() => false);
+    const toggleIsDark = React.useCallback(
+        (event: React.ChangeEvent<HTMLInputElement>) => {
+            const target = event.target;
+            setIsDark(target.checked);
+            CometStyleXSheet.rootStyleSheet.toggleCustomTheme(!isDark);
+        },
+        [isDark, setIsDark]
+    );
 
-  // ...
+    // ...
 };
 ```
 
 ## Thanks to
 
-- We'd like to send a big thanks to: johanholmerin for style9 (an other stylex cover)
-- We'd like to thanks Facebook very much (most of javascript code in stylex is re-write from built code of Facebook)
+-   We'd like to send a big thanks to: johanholmerin for style9 (an other stylex cover)
+-   We'd like to thanks Facebook very much (most of javascript code in stylex is re-write from built code of Facebook)
 
 ## Contributing
 
@@ -454,7 +454,6 @@ README.md to run Reactjs demo
 ## Join Stylex Community (Facebook group)
 
 Visit [this link](https://www.facebook.com/groups/713597106002279) to join Stylex community.
-
 
 ## License
 

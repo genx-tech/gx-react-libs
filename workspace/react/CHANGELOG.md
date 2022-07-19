@@ -1,5 +1,11 @@
 # @genx/react
 
+## 0.4.5
+
+### Patch Changes
+
+-   Add simple event api to runtime
+
 ## 0.4.4
 
 ### Patch Changes

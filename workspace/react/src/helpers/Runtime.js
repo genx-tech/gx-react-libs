@@ -19,6 +19,7 @@ class Runtime {
     warnMissingTranslation = false;
     config = {};
     modulesRegistry = {};
+    events = {};
     swrConfig = swrConfig;
 
     // getter/setter of dynamic objects
@@ -54,6 +55,44 @@ class Runtime {
 
     registerCreator(objectName, creatorFunction) {
         this.register(`create:${objectName}`, creatorFunction);
+    }
+
+    // simple event dispatcher
+    onEvent(eventName, handler) {
+        const bucket = this.events[eventName];
+
+        if (bucket) {
+            if (this.isDevMode) {
+                if (bucket.indexOf(handler) !== -1) {
+                    throw new Error(`Duplicate handler for event "${eventName}".`);
+                }
+            }
+
+            bucket.push(handler);
+        } else {
+            this.events[eventName] = [handler];
+        }
+    }
+
+    removeEvent(eventName, handler) {
+        const bucket = this.events[eventName];
+
+        if (bucket) {
+            const pos = bucket.indexOf(handler);
+            if (pos > -1) {
+                this.events[eventName].splice(pos, 1);
+                return;
+            }
+        }
+
+        if (this.isDevMode) {
+            throw new Error(`Handler to remove is not found for event "${eventName}".`);
+        }
+    }
+
+    dispatchEvent(eventName, ...args) {
+        const bucket = this.events[eventName];
+        bucket?.forEach((handler) => handler(...args));
     }
 
     // logger related
