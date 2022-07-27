@@ -1,5 +1,14 @@
 {
-    "presets": ["@babel/preset-env", ["@babel/preset-react", { "runtime": "automatic" }]],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "entry",
+                "corejs": "3.24.0"
+            }
+        ],
+        ["@babel/preset-react", { "runtime": "automatic" }]
+    ],
     "plugins": [
         [
             "@genx/babel-plugin-transform-stylex",
@@ -9,5 +18,7 @@
                 "useAll": true
             }
         ]
-    ]
+    ],
+    "minified": true,
+    "comments": false
 }

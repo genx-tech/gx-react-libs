@@ -1,5 +1,12 @@
 # @genx/react-addon
 
+## 0.4.5
+
+### Patch Changes
+
+-   Updated dependencies
+    -   @genx/react@0.4.7
+
 ## 0.4.4
 
 ### Patch Changes

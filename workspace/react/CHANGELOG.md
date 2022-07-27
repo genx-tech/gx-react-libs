@@ -1,5 +1,11 @@
 # @genx/react
 
+## 0.4.7
+
+### Patch Changes
+
+-   fix translator default message error when message if not a string
+
 ## 0.4.6
 
 ### Patch Changes

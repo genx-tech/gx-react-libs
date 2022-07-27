@@ -84,7 +84,7 @@ export default function useI18n(moduleName = 'default', sourceView) {
                     if (vars) {
                         _msg = {
                             id: messageId,
-                            defaultMessage: _msg,
+                            defaultMessage: _msg.toString(),
                         };
                     } else {
                         return _msg;
