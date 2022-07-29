@@ -51,9 +51,11 @@ const createRoutes = (registry, routes, parentPath = '/') => {
         const pathInfo = node.path === '/' && parentPath !== '/' ? { index: true } : { path: node.path };
 
         if (node.redirectTo) {
+            const extra = node.replace ? { replace: true } : null;
+
             return {
                 ...pathInfo,
-                element: <Navigate to={node.redirectTo} />,
+                element: <Navigate to={node.redirectTo} {...extra} />,
             };
         }
 

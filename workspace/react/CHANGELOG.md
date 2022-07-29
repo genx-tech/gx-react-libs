@@ -1,5 +1,11 @@
 # @genx/react
 
+## 0.4.8
+
+### Patch Changes
+
+-   fix trace logger
+
 ## 0.4.7
 
 ### Patch Changes

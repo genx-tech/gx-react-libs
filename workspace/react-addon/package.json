@@ -1,6 +1,6 @@
 {
     "name": "@genx/react-addon",
-    "version": "0.4.5",
+    "version": "0.4.6",
     "description": "Gen-X React Addons",
     "main": "index.js",
     "module": "index.js",

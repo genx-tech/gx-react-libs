@@ -8,6 +8,7 @@ export const ERROR = 5;
 let logLevel = INFO;
 
 const mapLogLevels = {
+    trace: TRACE,
     debug: DEBUG,
     verbose: VERBOSE,
     info: INFO,
@@ -26,7 +27,7 @@ export const setLogLevel = (level) => (logLevel = mapLogLevels[level]);
 export const makeLogger = (logger) => (level, logInfoProducer) => {
     const enabledLogLevel = mapLogLevels[level] >= logLevel ? mapLogLevels[level] : 0;
 
-    if (enabledLogLevel) {
+    if (enabledLogLevel !== 0) {
         let args = typeof logInfoProducer === 'function' ? logInfoProducer() : logInfoProducer;
         Array.isArray(args) || (args = [args]);
 
@@ -35,10 +36,10 @@ export const makeLogger = (logger) => (level, logInfoProducer) => {
 };
 
 export const consoleLogger = (level, args) =>
-    (level > WARNING
+    (level === ERROR
         ? console.error
         : level === WARNING
         ? console.warn
-        : level === DEBUG
+        : level === TRACE
         ? console.trace
         : console.log)(`[${levelText[level]}]`, ...args);
